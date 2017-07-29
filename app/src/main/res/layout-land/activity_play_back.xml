@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ashok.mediaplayer5.PlayBack"
+    android:background="#ffffffff"
+    android:weightSum="1">
+
+
+
+        <ImageView
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:id="@+id/album_art"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/image2"
+            android:background="#ff2affd3"
+            android:layout_above="@+id/song_progress"
+            android:layout_toEndOf="@+id/next"
+            android:layout_toRightOf="@+id/next"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:id="@+id/show_title"
+            android:layout_toRightOf="@+id/album_art"
+            android:textSize="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Artist"
+            android:id="@+id/show_artist"
+            android:textSize="20dp"
+            android:layout_below="@+id/show_title"
+            android:layout_toRightOf="@+id/album_art"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp" />
+
+
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/song_progress"
+            android:clickable="true"
+            android:layout_above="@+id/next"
+            android:layout_alignRight="@+id/total"
+            android:layout_alignEnd="@+id/total" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/next"
+            android:src="@android:drawable/ic_media_next"
+            android:layout_toRightOf="@+id/play"
+            android:layout_toEndOf="@+id/play"
+            android:layout_marginLeft="20dp"
+            android:background="#ffff9631"
+            android:minHeight="50dp"
+            android:minWidth="50dp"
+            android:layout_alignParentBottom="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/previous"
+            android:src="@android:drawable/ic_media_previous"
+            android:layout_alignTop="@+id/play"
+            android:layout_toLeftOf="@+id/play"
+            android:layout_toStartOf="@+id/play"
+            android:layout_marginRight="20dp"
+            android:background="#ffff9631"
+            android:minHeight="50dp"
+            android:minWidth="50dp"
+            android:layout_alignParentBottom="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/play"
+            android:src="@android:drawable/ic_media_pause"
+            android:background="#ffff9631"
+            android:minHeight="50dp"
+            android:minWidth="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/covered"
+            android:layout_below="@+id/song_progress"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/total"
+            android:layout_below="@+id/song_progress"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp" />
+
+</RelativeLayout>
